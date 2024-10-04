@@ -35,7 +35,7 @@ const displayVideos = (data) => {
     const card = document.createElement("card");
     card.classList = "card card-compact";
     card.innerHTML = `
-    <figure class = "h-[190px] w-full" >
+    <figure class = "h-[205px] w-full" >
     <img class = "h-full w-full"
         src="${video.thumbnail} "
         alt="Shoes" />
