@@ -35,17 +35,24 @@ const displayVideos = (data) => {
     const card = document.createElement("card");
     card.classList = "card card-compact";
     card.innerHTML = `
-    <figure>
-    <img
+    <figure class = "h-[190px] w-full" >
+    <img class = "h-full w-full"
         src="${video.thumbnail} "
         alt="Shoes" />
     </figure>
-    <div class="card-body">
-    <h2 class="card-title">${video.title} </h2>
-    <p>${video.description} </p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
+    <div class="px-0 py-2">
+     <div class = "flex gap-2 items-center ">
+   
+     <div><img class ="h-10 w-10 object-cover rounded-full" src = ${video.authors[0].profile_picture}></div>
+   
+    <div>
+    <h2 class = "font-bold"> ${video.title} </h2>
+    <div class = "flex items-center gap-2">
+    <p>${video.authors[0].profile_name} </p>
+    <p> <img width="20" height="20" src="https://img.icons8.com/fluency/48/verified-badge--v1.png" alt="verified-badge--v1"/></p>
     </div>
+    </div>
+     </div>
   </div>
         `;
 
